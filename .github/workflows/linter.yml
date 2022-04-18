@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: make-lint
-        run: make lint
+        run: 
+            cd ../..
+            make lint
