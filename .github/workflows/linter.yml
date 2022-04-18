@@ -6,4 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: make-lint
-        run: make lint
+        run: |
+          pip install poetry
+          make lint
