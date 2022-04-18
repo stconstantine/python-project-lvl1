@@ -14,7 +14,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install poetry
-          cat Makefile
           make install
       - name: Run linter
         run: |
