@@ -2,8 +2,11 @@
 install: # update deps
 	poetry install
 
-brain-games: # run
+brain-games: # run brain_games
 	poetry run brain-games
+
+brain-even: # run brain_games
+	poetry run brain-even
 
 build: # build dist
 	poetry build
