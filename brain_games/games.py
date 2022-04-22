@@ -8,9 +8,9 @@ UPPER_BORDER = 50
 WINS_COUNT_REQUIRED = 3
 
 
-def get_wrong_correct_answer_string(user_answer, correct_answer):
-    """Return place user_answer and correct_answer to the templated string."""
-    return f"\'{user_answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'."
+def _get_wrong_correct_answer_string(user_ans, correct):
+    """Return place user_ans and correct to the templated string."""
+    return f"'{user_ans}' is wrong answer ;(. Correct answer was '{correct}'."
 
 
 def even():
@@ -32,7 +32,7 @@ def even():
                 user_winning = True
                 wins_count += 1
             else:
-                response = get_wrong_correct_answer_string(answer, 'yes')
+                response = _get_wrong_correct_answer_string(answer, 'yes')
                 user_winning = False
 
         else:
@@ -41,7 +41,7 @@ def even():
                 user_winning = True
                 wins_count += 1
             else:
-                response = get_wrong_correct_answer_string(answer, 'no')
+                response = _get_wrong_correct_answer_string(answer, 'no')
                 user_winning = False
         print(response)
 
