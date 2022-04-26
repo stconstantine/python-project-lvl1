@@ -3,6 +3,7 @@
 from brain_games import interface
 from brain_games.games.calc_game import calc
 
+
 def main():
     username = interface.welcome_user()
     user_wins = calc()
