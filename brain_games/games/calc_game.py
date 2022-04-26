@@ -1,4 +1,5 @@
 from random import randint, choice
+
 from brain_games import interface
 
 LOWER_BORDER = 0

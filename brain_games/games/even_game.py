@@ -1,5 +1,6 @@
 """The module to realize even game logic."""
 from random import randint
+
 from prompt import string
 
 LOWER_BORDER = 1
