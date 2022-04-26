@@ -8,6 +8,9 @@ brain-games: # run brain_games
 brain-even: # run brain_games
 	poetry run brain-even
 
+brain-calc: # run brain_games
+	poetry run brain-calc
+
 build: # build dist
 	poetry build
 
