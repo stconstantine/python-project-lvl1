@@ -1,4 +1,4 @@
-"""The module to realize all games logic."""
+"""The module to realize even game logic."""
 from random import randint
 from prompt import string
 
