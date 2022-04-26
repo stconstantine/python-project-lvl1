@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Is even? game."""
 
-import brain_games.games as games
+from brain_games.games.even_game import even
 import prompt
 
 
@@ -12,7 +12,7 @@ def main():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
 
-    user_won = games.even()
+    user_won = even()
     if user_won:
         print(f'Congratulations, {name}!')
     else:
