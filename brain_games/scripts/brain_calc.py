@@ -5,7 +5,7 @@ from brain_games.games.calc_game import calc
 
 
 def main():
-    username = interface.welcome_user()
+    username = interface.welcome_user('calc_game')
     user_wins = calc()
     if user_wins:
         interface.say_congrats(username)

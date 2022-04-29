@@ -5,7 +5,7 @@ from brain_games.games.gcd_game import gcd
 
 
 def main():
-    username = interface.welcome_user()
+    username = interface.welcome_user('gcd_game')
     user_wins = gcd()
     if user_wins:
         interface.say_congrats(username)

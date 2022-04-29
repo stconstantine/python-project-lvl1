@@ -1,11 +1,25 @@
 import prompt
 
 
-def welcome_user():
+def welcome_user(game: str):
     """Prompts user to input the username then print greeting."""
     print('Welcome to the Brain Games!')
     username = prompt.string('May I have your username? ')
     print(f'Hello, {username}!')
+
+    if game == 'progression_game':
+        rules = 'What number is missing in the progression?'
+    elif game == 'gcd_game':
+        rules = 'Find the greatest common divisor of given numbers.'
+    elif game == 'calc_game':
+        rules = 'What is the result of the expression?'
+    elif game == 'even_game':
+        rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+    else:
+        rules = 'Don\'t no the rules for this game'
+
+    print(rules)
+
     return username
 
 
