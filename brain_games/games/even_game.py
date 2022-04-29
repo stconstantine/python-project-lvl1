@@ -22,16 +22,14 @@ def even():
             if answer == 'yes':
                 interface.say_correct()
                 user_winning = True
-                wins_count += 1
             else:
-                response = interface.say_wrong_correct(answer, 'yes')
+                interface.say_wrong_correct(answer, 'yes')
                 user_winning = False
 
         else:
             if answer == 'no':
                 interface.say_correct()
                 user_winning = True
-                wins_count += 1
             else:
                 interface.say_wrong_correct(answer, 'no')
                 user_winning = False
