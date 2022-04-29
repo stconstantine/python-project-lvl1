@@ -9,10 +9,12 @@ WINS_COUNT_REQUIRED = 3
 
 def even():
     """Even game. Returns True if user wins and False if fails."""
-    wins_count = 0
+    round_count = 0
     user_winning = True
 
-    while wins_count < WINS_COUNT_REQUIRED and user_winning:
+    while round_count < WINS_COUNT_REQUIRED and user_winning:
+        round_count += 1
+
         game_number = randint(LOWER_BORDER, UPPER_BORDER)
         number_is_even = (game_number % 2 == 0)
         interface.give_task(game_number)
