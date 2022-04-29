@@ -19,8 +19,8 @@ def calc():
                f'{randint(LOWER_BORDER, UPPER_BORDER)}'
         interface.give_task(expr)
 
-        user_answer = interface.get_answer('integer')
-        user_winning = (user_answer == eval(expr))
+        user_answer = interface.get_answer()
+        user_winning = (user_answer == str(eval(expr)))
 
         if user_winning:
             interface.say_correct()

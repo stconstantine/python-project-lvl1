@@ -19,10 +19,10 @@ def gcd():
         num2 = randint(LOWER_BORDER, UPPER_BORDER)
         interface.give_task(f'{num1} {num2}')
 
-        user_answer = interface.get_answer('integer')
+        user_answer = interface.get_answer()
         correct_answer = math.gcd(num1, num2)
 
-        user_winning = (user_answer == correct_answer)
+        user_winning = (user_answer == str(correct_answer))
 
         if user_winning:
             interface.say_correct()

@@ -29,12 +29,8 @@ def give_task(task):
     print('Question:', task)
 
 
-def get_answer(answer_type: str = ''):
-    prompt_string = 'Your answer: '
-    if answer_type == 'integer':
-        return prompt.integer(prompt_string)
-    else:
-        return prompt.string(prompt_string)
+def get_answer():
+    return prompt.string('Your answer: ')
 
 
 def say_correct():
