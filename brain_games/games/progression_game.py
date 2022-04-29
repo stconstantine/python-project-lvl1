@@ -4,6 +4,7 @@ from brain_games import interface
 
 WINS_COUNT_REQUIRED = 3
 
+
 def progression():
     round_count = 0
     user_winning = True
