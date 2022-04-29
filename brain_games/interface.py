@@ -15,6 +15,8 @@ def welcome_user(game: str):
         rules = 'What is the result of the expression?'
     elif game == 'even_game':
         rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+    elif game == 'prime_game':
+        rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     else:
         rules = 'Don\'t no the rules for this game'
 
@@ -23,7 +25,7 @@ def welcome_user(game: str):
     return username
 
 
-def give_task(task: str):
+def give_task(task):
     print('Question:', task)
 
 

@@ -17,6 +17,9 @@ brain-gcd: # run brain_games
 brain-progression: # run brain_games
 	poetry run brain-progression
 
+brain-prime: # run brain_games
+	poetry run brain-prime
+
 build: # build dist
 	poetry build
 
