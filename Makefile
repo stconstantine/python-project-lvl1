@@ -14,6 +14,9 @@ brain-calc: # run brain_games
 brain-gcd: # run brain_games
 	poetry run brain-gcd
 
+brain-progression: # run brain_games
+	poetry run brain-progression
+
 build: # build dist
 	poetry build
 
