@@ -2,21 +2,17 @@
 """Is even? game."""
 
 from brain_games.games.even_game import even
-import prompt
+from brain_games import interface
 
 
 def main():
-    """Start game with greetings and farewells."""
 
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
-    user_won = even()
-    if user_won:
-        print(f'Congratulations, {name}!')
+    username = interface.welcome_user('even_game')
+    user_wins = even()
+    if user_wins:
+        interface.say_congrats(username)
     else:
-        print(f'Let\'s try again, {name}!')
+        interface.say_try_again(username)
 
 
 if __name__ == '__main__':
