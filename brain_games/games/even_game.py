@@ -1,39 +1,26 @@
-"""The module to realize even game logic."""
+"""
+Module to perform a one round in even game.
+Function even_round randomly generates a number and
+asks a user if it even or not. User must type 'yes' or 'no'
+Returns a user answer and a correct answer.
+"""
+
 from random import randint
+
 from brain_games import interface
 
-LOWER_BORDER = 1
-UPPER_BORDER = 50
-WINS_COUNT_REQUIRED = 3
+from brain_games.consts import LOWER_BORDER, UPPER_BORDER
 
 
-def even():
-    """Even game. Returns True if user wins and False if fails."""
-    round_count = 0
-    user_winning = True
+def even_round():
+    game_number = randint(LOWER_BORDER, UPPER_BORDER)
+    interface.give_task(game_number)
+    user_answer = interface.get_answer()
 
-    while round_count < WINS_COUNT_REQUIRED and user_winning:
-        round_count += 1
+    if game_number % 2 == 0:
+        correct_answer = 'yes'
 
-        game_number = randint(LOWER_BORDER, UPPER_BORDER)
-        number_is_even = (game_number % 2 == 0)
-        interface.give_task(game_number)
-        answer = interface.get_answer()
+    else:
+        correct_answer = 'no'
 
-        if number_is_even:
-            if answer == 'yes':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'yes')
-                user_winning = False
-
-        else:
-            if answer == 'no':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'no')
-                user_winning = False
-
-    return user_winning
+    return user_answer, correct_answer

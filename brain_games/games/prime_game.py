@@ -1,41 +1,27 @@
+"""
+Module to perform a one round in prime game.
+Function prime_round randomly generates a number and
+asks a user if it is prime or not. User must type 'yes' or 'no'
+Uses a list of primes from brain_games.consts.PRIMES
+Returns a user answer and a correct answer.
+"""
+
 from random import randint
+
 from brain_games import interface
-LOWER_BORDER = 1
-UPPER_BORDER = 50
-WINS_COUNT_REQUIRED = 3
-PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
-          61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127,
-          131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191,
-          193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257,
-          263, 269, 271]
+
+from brain_games.consts import LOWER_BORDER, UPPER_BORDER, PRIMES
 
 
-def prime():
-    round_count = 0
-    user_winning = True
+def prime_round():
+    game_number = randint(LOWER_BORDER, UPPER_BORDER)
+    interface.give_task(game_number)
+    user_answer = interface.get_answer()
 
-    while round_count < WINS_COUNT_REQUIRED and user_winning:
-        round_count += 1
-        game_number = randint(LOWER_BORDER, UPPER_BORDER)
-        number_is_prime = game_number in PRIMES
+    if game_number in PRIMES:
+        correct_answer = 'yes'
 
-        interface.give_task(game_number)
-        answer = interface.get_answer()
+    else:
+        correct_answer = 'no'
 
-        if number_is_prime:
-            if answer == 'yes':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'yes')
-                user_winning = False
-
-        else:
-            if answer == 'no':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'no')
-                user_winning = False
-
-    return user_winning
+    return user_answer, correct_answer
