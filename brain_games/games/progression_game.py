@@ -1,5 +1,7 @@
 from random import randint
+
 from brain_games import interface
+
 from brain_games.consts import PROG_LEN_LOW_BORDER, PROG_LEN_UPPER_BORDER, \
     PROG_STEP_LOW, PROG_STEP_UPPER
 
@@ -24,6 +26,4 @@ def progression_round():
     user_answer = interface.get_answer()
     correct_answer = raw_progression[question_pos]
 
-    user_winning = (user_answer == correct_answer)
-
-    return user_winning, user_answer, correct_answer
+    return user_answer, correct_answer

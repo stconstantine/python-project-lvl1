@@ -1,6 +1,8 @@
 import math
 from random import randint
+
 from brain_games import interface
+
 from brain_games.consts import LOWER_BORDER, UPPER_BORDER
 
 
@@ -13,6 +15,5 @@ def gcd_round():
     user_answer = interface.get_answer()
 
     correct_answer = str(math.gcd(num1, num2))
-    user_winning = (user_answer == correct_answer)
 
-    return user_winning, user_answer, correct_answer
+    return user_answer, correct_answer
