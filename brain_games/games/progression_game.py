@@ -1,3 +1,12 @@
+"""
+Module to perform a one round in progression game.
+Function progression_round generates an arithmetic progression
+with a random step and removes random member, asking user to guess it.
+Uses some consts to variate the length of a progression,
+and a range of possible step values. User must type a number.
+Returns a user answer and a correct answer.
+"""
+
 from random import randint
 
 from brain_games import interface

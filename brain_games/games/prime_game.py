@@ -1,3 +1,11 @@
+"""
+Module to perform a one round in prime game.
+Function prime_round randomly generates a number and
+asks a user if it is prime or not. User must type 'yes' or 'no'
+Uses a list of primes from brain_games.consts.PRIMES
+Returns a user answer and a correct answer.
+"""
+
 from random import randint
 
 from brain_games import interface

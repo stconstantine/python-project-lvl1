@@ -1,3 +1,10 @@
+"""
+Module to perform a one round in gcd game.
+Function gcd_round randomly generates two numbers and
+asks a user to determine the greatest common divisor of them.
+Returns a user answer and a correct answer.
+"""
+
 import math
 from random import randint
 

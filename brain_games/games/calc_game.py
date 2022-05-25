@@ -1,3 +1,11 @@
+"""
+Module to perform a one round in calc game.
+Function calc_round forms a math expression of two args with
+binary OPERANDS and tasks a user to solve it.
+Then calculates a correct result and
+returns a user answer and a correct answer.
+"""
+
 from random import randint, choice
 
 from brain_games import interface

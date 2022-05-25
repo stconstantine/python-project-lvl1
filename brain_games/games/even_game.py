@@ -1,3 +1,10 @@
+"""
+Module to perform a one round in even game.
+Function even_round randomly generates a number and
+asks a user if it even or not. User must type 'yes' or 'no'
+Returns a user answer and a correct answer.
+"""
+
 from random import randint
 
 from brain_games import interface
