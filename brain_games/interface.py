@@ -7,10 +7,14 @@ def welcome_user(game: str):
     username = prompt.string('May I have your username? ')
     print(f'Hello, {username}!')
     rules_catalog = {'calc_game': 'What is the result of the expression?',
-                     'even_game': 'Answer "yes" if the number is even, otherwise answer "no".',
-                     'gcd_game': 'Find the greatest common divisor of given numbers.',
-                     'prime_game': 'Answer "yes" if given number is prime. Otherwise answer "no".',
-                     'progression_game': 'What number is missing in the progression?'
+                     'even_game': 'Answer "yes" if the number is even, '
+                                  'otherwise answer "no".',
+                     'gcd_game': 'Find the greatest common divisor '
+                                 'of given numbers.',
+                     'prime_game': 'Answer "yes" if given number is prime. '
+                                   'Otherwise answer "no".',
+                     'progression_game': 'What number is missing '
+                                         'in the progression?'
                      }
 
     print(rules_catalog[game])
