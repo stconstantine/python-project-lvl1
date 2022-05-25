@@ -1,11 +1,7 @@
 from random import randint, choice
-
 from brain_games import interface
-
-LOWER_BORDER = 0
-UPPER_BORDER = 50
-WINS_COUNT_REQUIRED = 3
-OPERANDS = ['+', '-', '*']
+from brain_games.consts import LOWER_BORDER, UPPER_BORDER, \
+    WINS_COUNT_REQUIRED, OPERANDS
 
 
 def calc():

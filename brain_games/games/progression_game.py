@@ -1,8 +1,7 @@
 from random import randint
 from brain_games import interface
-
-
-WINS_COUNT_REQUIRED = 3
+from brain_games.consts import WINS_COUNT_REQUIRED, PROG_LEN_LOW_BORDER, \
+    PROG_LEN_UPPER_BORDER, PROG_STEP_LOW, PROG_STEP_UPPER
 
 
 def progression():
@@ -11,9 +10,9 @@ def progression():
     while round_count < WINS_COUNT_REQUIRED and user_winning:
         round_count += 1
 
-        prog_length = randint(5, 12)
+        prog_length = randint(PROG_LEN_LOW_BORDER, PROG_LEN_UPPER_BORDER)
         question_pos = randint(1, prog_length - 2)
-        prog_step = randint(1, 10)
+        prog_step = randint(PROG_STEP_LOW, PROG_STEP_UPPER)
         first_element = randint(0, prog_step)
         raw_progression = []
         for element in range(first_element,
