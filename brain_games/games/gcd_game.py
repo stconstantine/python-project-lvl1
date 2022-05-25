@@ -1,7 +1,12 @@
 from random import randint
-import math
+
 from brain_games import interface
-from brain_games.consts import LOWER_BORDER, UPPER_BORDER, WINS_COUNT_REQUIRED
+
+import math
+
+LOWER_BORDER = 1
+UPPER_BORDER = 10
+WINS_COUNT_REQUIRED = 3
 
 
 def gcd():

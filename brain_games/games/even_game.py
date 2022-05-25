@@ -1,9 +1,14 @@
+"""The module to realize even game logic."""
 from random import randint
 from brain_games import interface
-from brain_games.consts import LOWER_BORDER, UPPER_BORDER, WINS_COUNT_REQUIRED
+
+LOWER_BORDER = 1
+UPPER_BORDER = 50
+WINS_COUNT_REQUIRED = 3
 
 
 def even():
+    """Even game. Returns True if user wins and False if fails."""
     round_count = 0
     user_winning = True
 
