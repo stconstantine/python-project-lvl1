@@ -1,35 +1,19 @@
 from random import randint
 from brain_games import interface
-from brain_games.consts import LOWER_BORDER, UPPER_BORDER, \
-    WINS_COUNT_REQUIRED, PRIMES
+from brain_games.consts import LOWER_BORDER, UPPER_BORDER, PRIMES
 
 
-def prime():
-    round_count = 0
-    user_winning = True
+def prime_round():
+    game_number = randint(LOWER_BORDER, UPPER_BORDER)
+    interface.give_task(game_number)
+    user_answer = interface.get_answer()
 
-    while round_count < WINS_COUNT_REQUIRED and user_winning:
-        round_count += 1
-        game_number = randint(LOWER_BORDER, UPPER_BORDER)
-        number_is_prime = game_number in PRIMES
+    if game_number in PRIMES:
+        correct_answer = 'yes'
 
-        interface.give_task(game_number)
-        answer = interface.get_answer()
+    else:
+        correct_answer = 'no'
 
-        if number_is_prime:
-            if answer == 'yes':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'yes')
-                user_winning = False
+    user_winning = (user_answer == correct_answer)
 
-        else:
-            if answer == 'no':
-                interface.say_correct()
-                user_winning = True
-            else:
-                interface.say_wrong_correct(answer, 'no')
-                user_winning = False
-
-    return user_winning
+    return user_winning, user_answer, correct_answer

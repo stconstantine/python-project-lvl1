@@ -1,5 +1,5 @@
 from brain_games.consts import WINS_COUNT_REQUIRED
-from brain_games.games import calc_game, even_game, gcd_game
+from brain_games.games import calc_game, even_game, gcd_game, prime_game
 from brain_games import interface
 """
 Function game() calls distinct game module,
@@ -22,6 +22,8 @@ def game(game_name):
         get_round_results = even_game.even_round
     elif game_name == 'gcd_game':
         get_round_results = gcd_game.gcd_round
+    elif game_name == 'prime_game':
+        get_round_results = prime_game.prime_round
     else:
         print(f'ERROR! Was called the game {game_name} '
               f'in common_engine. No such a game!')
