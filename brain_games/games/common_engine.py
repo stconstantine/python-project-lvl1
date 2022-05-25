@@ -19,14 +19,14 @@ def game(game_name):
     user_winning = True
     username = interface.welcome_user(game_name)
 
-    game_names_catalog = {'calc_game': calc_game.calc_round,
+    games_catalog = {'calc_game': calc_game.calc_round,
                           'even_game': even_game.even_round,
                           'gcd_game': gcd_game.gcd_round,
                           'prime_game': prime_game.prime_round,
                           'progression_game': progression_game.progression_round
                           }
 
-    get_round_results = game_names_catalog[game_name]
+    get_round_results = games_catalog[game_name]
 
     while round_count < WINS_COUNT_REQUIRED and user_winning:
         round_count += 1
